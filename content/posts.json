@@ -11,10 +11,11 @@
     "excerpt": "Find the right text-size settings for iPhone, Samsung Galaxy, and Android. Includes fixes for apps that still look too small.",
     "introduction": "If messages, menus, or websites on your phone are uncomfortable to read, you probably do not need a new device. iPhone and Android both have built-in controls that enlarge text, and some settings can make buttons and icons easier to see too. This guide shows where to find those controls, what each one changes, and how to fix a few common problems.",
     "hero": {
-      "src": "/images/phone.webp",
-      "alt": "AI-created close-up of a person changing phone display settings",
-      "caption": "A clear phone display can make everyday technology easier to use.",
-      "ai_generated": true
+      "src": "https://images.pexels.com/photos/15760170/pexels-photo-15760170.jpeg?auto=compress&cs=tinysrgb&w=1800",
+      "alt": "High-resolution photo of a hand holding a smartphone with its settings menu visible",
+      "caption": "Phone text and display options can be adjusted using built-in settings.",
+      "credit": "Lisa Fotios",
+      "photo_url": "https://www.pexels.com/photo/iphone-setting-on-screen-15760170/"
     },
     "sections": [
       {
@@ -145,10 +146,11 @@
     "excerpt": "Musty towels often come down to trapped moisture, detergent residue or washer buildup. Here's a safe step-by-step reset.",
     "introduction": "A towel can come out of the laundry looking perfectly clean and still develop a musty smell when it gets wet again. The cause is usually not a lack of fragrance. Moisture left in the fabric, detergent residue, or an unclean washer can all contribute. The practical fix is to clean the fabric thoroughly, rinse well, and dry it completely.",
     "hero": {
-      "src": "/images/towels.webp",
-      "alt": "AI-created stack of clean white and pale blue bath towels on a shelf",
-      "caption": "Thorough cleaning and drying help keep towels smelling fresh.",
-      "ai_generated": true
+      "src": "https://images.pexels.com/photos/20523089/pexels-photo-20523089.jpeg?auto=compress&cs=tinysrgb&w=1800",
+      "alt": "High-resolution image of clean white and blue striped towels neatly stored on wooden shelves",
+      "caption": "Drying towels completely before storage can help prevent musty smells.",
+      "credit": "Lauren Cuddy",
+      "photo_url": "https://www.pexels.com/photo/view-of-shelves-with-rolled-towels-20523089/"
     },
     "sections": [
       {
@@ -282,10 +284,11 @@
     "excerpt": "Cut wasted electricity with practical steps for thermostats, lighting, laundry, appliances and monthly bill tracking.",
     "introduction": "A higher electricity bill does not always mean you are using more appliances. Weather, utility rates, household routines and equipment settings can all affect the total. Instead of buying expensive gadgets right away, start by finding out where your home uses energy and changing habits that create waste.",
     "hero": {
-      "src": "/images/bill.webp",
-      "alt": "AI-created close-up of an electricity bill held over a wooden table",
-      "caption": "Checking electricity use and monthly bills can reveal opportunities to save.",
-      "ai_generated": true
+      "src": "https://images.pexels.com/photos/6963924/pexels-photo-6963924.jpeg?auto=compress&cs=tinysrgb&w=1800",
+      "alt": "High-resolution photo of a couple reviewing household bills and paperwork at a table",
+      "caption": "Reviewing monthly electricity usage is a useful first step toward saving energy.",
+      "credit": "Mikhail Nilov",
+      "photo_url": "https://www.pexels.com/photo/a-couple-sitting-at-the-table-6963924/"
     },
     "sections": [
       {
