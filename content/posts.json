@@ -1,111 +1,424 @@
 [
   {
     "slug": "how-to-make-phone-text-larger",
-    "title": "How to Make Text Larger on Your Smartphone",
+    "title": "How to Make Text Bigger on iPhone and Android",
+    "seo_title": "How to Make Text Bigger on iPhone & Android (2026 Guide)",
+    "meta_description": "Make text bigger on iPhone, Samsung Galaxy, or other Android phones. Follow simple steps for larger fonts, screen zoom, bold text, and accessibility.",
     "category": "Simple Technology",
-    "excerpt": "An easy guide to improving readability on iPhone and Android without replacing your phone.",
     "publish_at": "2026-10-12T00:00:00Z",
-    "introduction": "Small text can make an otherwise useful phone frustrating. You can usually enlarge the words and important interface elements using accessibility settings.",
+    "date_modified": "2026-10-12",
+    "read_time": "6 min read",
+    "excerpt": "Find the right text-size settings for iPhone, Samsung Galaxy, and Android. Includes fixes for apps that still look too small.",
+    "introduction": "If messages, menus, or websites on your phone are uncomfortable to read, you probably do not need a new device. iPhone and Android both have built-in controls that enlarge text, and some settings can make buttons and icons easier to see too. This guide shows where to find those controls, what each one changes, and how to fix a few common problems.",
+    "hero": {
+      "src": "https://images.pexels.com/photos/11613475/pexels-photo-11613475.jpeg?auto=compress&cs=tinysrgb&w=1400",
+      "alt": "Person holding and reading a smartphone indoors",
+      "credit": "chen pincheng",
+      "photo_url": "https://www.pexels.com/photo/hand-holding-smartphone-11613475/",
+      "caption": "Larger text and clearer controls can make everyday phone use more comfortable."
+    },
     "sections": [
       {
-        "heading": "Start with display settings",
+        "id": "quick-answer",
+        "heading": "Quick answer: where is the text-size setting?",
         "paragraphs": [
-          "On an iPhone, open Settings and look for Display & Brightness, then Text Size. Move the slider until the words are comfortable to read. Larger Accessibility Sizes are available under Accessibility > Display & Text Size.",
-          "On most Android phones, open Settings and search for Font size or Display size. Menu names can vary between brands and software versions."
+          "On iPhone, open Settings → Accessibility → Display & Text Size → Larger Text. On Android, open Settings and search for Font size. Use the slider and preview the result.",
+          "If you want menus, buttons and icons to look larger as well, use Display Zoom on iPhone or Display size / Screen zoom on Android. Those options are different from font size."
         ]
       },
       {
-        "heading": "Make the screen easier to see",
+        "id": "iphone",
+        "heading": "How to make text bigger on iPhone",
+        "lead": "Use these steps on a recent iPhone version. Some labels can differ slightly by iOS release.",
+        "steps": [
+          "Open the Settings app.",
+          "Tap Accessibility, then Display & Text Size.",
+          "Choose Larger Text.",
+          "Move the slider to the right until the sample looks comfortable.",
+          "If you still need bigger letters, turn on Larger Accessibility Sizes and adjust the slider again."
+        ],
         "paragraphs": [
-          "If a larger font is not enough, increase display size, adjust contrast or turn on bold text where your phone supports it.",
-          "Test the result inside the apps you use most. Some apps manage their own font size, so not every screen will change equally."
+          "You can also turn on Bold Text in Display & Text Size. This does not necessarily increase the letter height, but it makes strokes heavier and may improve readability.",
+          "For a less dramatic change, you can try Settings → Display & Brightness → Text Size. Apple also offers a Text Size control in Control Center that can be useful while using an app."
+        ],
+        "image": {
+          "src": "https://images.pexels.com/photos/7657622/pexels-photo-7657622.jpeg?auto=compress&cs=tinysrgb&w=1400",
+          "alt": "Person holding a smartphone beside a notebook at a desk",
+          "credit": "Cup of Couple",
+          "photo_url": "https://www.pexels.com/photo/a-person-writing-while-holding-a-smartphone-7657622/",
+          "caption": "Try your chosen font size in messages, email and a frequently used app."
+        }
+      },
+      {
+        "id": "iphone-zoom",
+        "heading": "Make iPhone buttons and icons bigger too",
+        "paragraphs": [
+          "Text size does not change the size of every control. If the keyboard, app icons, or interface elements still feel small, look for Display Zoom in your iPhone display settings.",
+          "Choose the enlarged display option, apply it, and check that your favorite apps still fit well on screen. A larger interface displays less information at one time; you can always reverse the change."
         ]
       },
       {
-        "heading": "Keep one more shortcut handy",
+        "id": "android",
+        "heading": "How to increase font size on Android",
+        "steps": [
+          "Open Settings on your Android phone.",
+          "Use the Settings search bar to find Font size.",
+          "Open the matching result and move the slider to enlarge text.",
+          "Return to the home screen, messaging app, and browser to check the result.",
+          "If controls still look too small, search Settings for Display size and increase that separately."
+        ],
         "paragraphs": [
-          "Both major phone platforms include magnification features in Accessibility. These can help with tiny text that an app does not let you resize."
+          "Android menu names vary among Google Pixel, Samsung Galaxy and other brands. Google notes that some apps may not follow the system's font size. If you cannot find a setting, the Settings search bar is often faster than looking through menus."
         ]
+      },
+      {
+        "id": "samsung",
+        "heading": "Samsung Galaxy: useful extra settings",
+        "paragraphs": [
+          "On many Samsung Galaxy devices, look under Settings → Display → Font size and style to adjust font size and, where available, bold font. Screen zoom changes the size of other interface elements.",
+          "Some Galaxy models also include Easy mode in Display settings. It can simplify the home screen and make items easier to select. This is optional; you do not have to turn it on merely to enlarge text."
+        ]
+      },
+      {
+        "id": "apps",
+        "heading": "What if text stays small in certain apps?",
+        "bullets": [
+          "Check the app's own Settings, Appearance or Accessibility menu: it may have a separate text-size option.",
+          "Try a browser's page zoom for hard-to-read websites.",
+          "Update the app if text scaling is broken or clipped.",
+          "Use the built-in magnification feature when an app does not support larger fonts.",
+          "If the page no longer fits, reduce display zoom slightly while keeping the font size comfortable."
+        ],
+        "paragraphs": [
+          "Changing text size will not damage the phone, and you can restore the original setting whenever you want. The most useful setting is the one that makes text readable without hiding important buttons."
+        ]
+      },
+      {
+        "id": "checklist",
+        "heading": "A one-minute readability checklist",
+        "bullets": [
+          "Increase text size first.",
+          "Enable bold text if that helps.",
+          "Adjust display zoom only if icons and menus are too small.",
+          "Check contrast and brightness in your usual lighting.",
+          "Test Messages, your browser and a banking or travel app before finishing."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can I enlarge text without making app icons bigger?",
+        "a": "Usually yes. Change Font size or Text Size first. Display Zoom and Display size are separate settings that also enlarge interface elements."
+      },
+      {
+        "q": "Why do some Android apps still have tiny text?",
+        "a": "Some apps do not support system font scaling consistently. Look for an in-app text-size setting or use screen magnification."
+      },
+      {
+        "q": "Will changing text size delete apps or messages?",
+        "a": "No. These are display preferences. You can return the slider to its previous position at any time."
       }
     ],
     "sources": [
       {
-        "name": "Apple Support — Display and text size",
-        "url": "https://support.apple.com/guide/iphone/adjust-display-and-text-size-iph3e2e1fb0/ios"
+        "name": "Apple Support — Make text easier to read on iPhone",
+        "url": "https://support.apple.com/guide/iphone/make-text-easier-to-read-iph3c076905a/ios"
       },
       {
-        "name": "Android Accessibility Help",
-        "url": "https://support.google.com/accessibility/android/"
+        "name": "Google Accessibility Help — Change text and display settings",
+        "url": "https://support.google.com/accessibility/android/answer/11183305?hl=en"
       }
+    ],
+    "related": [
+      "why-towels-smell-after-washing",
+      "simple-ways-to-reduce-home-electricity-use"
     ]
   },
   {
     "slug": "why-towels-smell-after-washing",
-    "title": "Why Towels Still Smell After Washing",
+    "title": "Why Towels Smell After Washing (and How to Fix It)",
+    "seo_title": "Why Towels Smell After Washing: Causes & Easy Fixes",
+    "meta_description": "Wondering why towels smell musty even after washing? Learn the most common causes, a step-by-step cleaning reset, and how to keep towels fresh.",
     "category": "Home & Everyday",
-    "excerpt": "Understand common causes of musty towel smells and practical ways to prevent them.",
     "publish_at": "2026-10-12T00:00:00Z",
-    "introduction": "A freshly washed towel should smell clean. When it still smells damp or musty, the issue is often moisture, washing habits or a washing machine that needs attention.",
+    "date_modified": "2026-10-12",
+    "read_time": "7 min read",
+    "excerpt": "Musty towels often come down to trapped moisture, detergent residue or washer buildup. Here's a safe step-by-step reset.",
+    "introduction": "A towel can come out of the laundry looking perfectly clean and still develop a musty smell when it gets wet again. The cause is usually not a lack of fragrance. Moisture left in the fabric, detergent residue, or an unclean washer can all contribute. The practical fix is to clean the fabric thoroughly, rinse well, and dry it completely.",
+    "hero": {
+      "src": "https://images.pexels.com/photos/11899611/pexels-photo-11899611.jpeg?auto=compress&cs=tinysrgb&w=1400",
+      "alt": "Towels inside the drum of a front-loading washing machine",
+      "credit": "Towfiqu barbhuiya",
+      "photo_url": "https://www.pexels.com/photo/towels-inside-a-washing-machine-11899611/",
+      "caption": "Musty odors can persist when towels stay damp or are not rinsed and dried thoroughly."
+    },
     "sections": [
       {
-        "heading": "Moisture is often the key",
+        "id": "common-causes",
+        "heading": "Why do clean towels smell musty?",
         "paragraphs": [
-          "A towel that stays damp for too long can develop an unpleasant smell. Spread towels out to dry completely instead of leaving them in a pile or a closed hamper.",
-          "After washing, move towels to the dryer or drying rack promptly. Make sure they are fully dry before folding and storing."
+          "Towels absorb plenty of water, and thick loops of fabric can stay damp for hours. A towel tossed in a hamper, left in the washer, or folded before it is fully dry provides conditions in which unwanted odors can develop.",
+          "Another common issue is buildup. More detergent does not always mean cleaner laundry; too much can be difficult to rinse away. Some fabric softeners can also leave a coating that affects absorbency."
+        ],
+        "bullets": [
+          "Damp towels left in a pile or closed laundry basket.",
+          "A washer overloaded with thick items.",
+          "Too much detergent or fabric softener.",
+          "A damp washing-machine gasket or detergent drawer.",
+          "Towels stored before they are completely dry."
         ]
       },
       {
-        "heading": "Avoid overloading the washer",
+        "id": "reset",
+        "heading": "How to remove a musty smell from towels",
+        "lead": "Before changing wash settings, check the towel's care label and your machine's manual.",
+        "steps": [
+          "Separate the musty towels from delicate clothing and do not pack the drum tightly.",
+          "Check the care label; select an appropriate normal wash cycle and water temperature.",
+          "Add a measured amount of laundry detergent according to the label and machine instructions.",
+          "Skip fabric softener for this wash if you suspect buildup.",
+          "Use an additional rinse only if residue remains and your machine offers the option.",
+          "Remove the towels as soon as the cycle ends and dry them completely before putting them away."
+        ],
         "paragraphs": [
-          "A tightly packed load may prevent adequate cleaning and rinsing. Follow your machine's load guidance and use the amount of detergent recommended for the load and water conditions.",
-          "More detergent is not always better. Residue may remain in fabrics if detergent is used excessively or rinsing is insufficient."
+          "If an odor persists, repeat with a suitable laundry detergent or laundry-care product used exactly as its label directs. Do not add random mixtures of household chemicals to a wash. In particular, never mix chlorine bleach with vinegar, ammonia or other cleaners."
         ]
       },
       {
-        "heading": "Check your machine",
+        "id": "dry",
+        "heading": "Dry towels thoroughly after every use",
         "paragraphs": [
-          "If several loads smell musty, inspect the washer gasket, detergent drawer and filter according to the manufacturer's manual. Run the recommended cleaning cycle when appropriate.",
-          "Never mix bleach with vinegar, ammonia or other cleaning chemicals."
+          "Hang used towels over a wide bar or rack where air can circulate instead of bunching them on a hook. In a humid bathroom, a fan, open door or a better-ventilated drying area may help.",
+          "After laundry, use the dryer setting allowed by the care label, or space towels apart on a drying rack. They should feel dry all the way through before folding."
+        ],
+        "image": {
+          "src": "https://images.pexels.com/photos/5630428/pexels-photo-5630428.jpeg?auto=compress&cs=tinysrgb&w=1400",
+          "alt": "Fresh towels hanging openly on a wooden rack for airflow",
+          "credit": "Roger Brown",
+          "photo_url": "https://www.pexels.com/photo/towels-drying-on-rack-5630428/",
+          "caption": "Towels dry more evenly when they are spread out instead of bunched together."
+        }
+      },
+      {
+        "id": "washer",
+        "heading": "Could the washing machine be causing the odor?",
+        "paragraphs": [
+          "If several kinds of laundry smell unpleasant right after washing, inspect the machine. Check visible detergent buildup, the drum, the door seal on front-loading washers, and any filter the manufacturer says is user-serviceable.",
+          "Run the manufacturer's recommended cleaning cycle when needed. Let the drum and detergent drawer dry between loads if your appliance instructions allow it. Never dismantle components or mix cleaning chemicals unless the manufacturer specifically says it is safe."
+        ]
+      },
+      {
+        "id": "softener",
+        "heading": "Should you use fabric softener on towels?",
+        "paragraphs": [
+          "Fabric softener is not required to get towels clean. Overuse can leave residue and may reduce absorbency. If your towels feel waxy or stop absorbing water well, wash them without softener for a while and use the right amount of detergent.",
+          "Do not use extra detergent to cover up smells. Correct washing, rinsing, and drying are generally more useful than stronger perfume."
+        ]
+      },
+      {
+        "id": "habits",
+        "heading": "Everyday habits that keep towels fresher",
+        "bullets": [
+          "Give each towel enough hanging space between uses.",
+          "Wash towels regularly, and sooner when heavily soiled.",
+          "Keep wet towels out of closed hampers until they dry.",
+          "Avoid overcrowding the washing machine.",
+          "Move laundry promptly from washer to dryer or rack.",
+          "Store towels only after they are completely dry."
+        ],
+        "image": {
+          "src": "https://images.pexels.com/photos/2964113/pexels-photo-2964113.jpeg?auto=compress&cs=tinysrgb&w=1400",
+          "alt": "Towels hanging separately to dry on a rack",
+          "credit": "Markus Winkler",
+          "photo_url": "https://www.pexels.com/photo/drying-bath-towels-2964113/",
+          "caption": "Spacing out towels helps air move through the fabric."
+        }
+      },
+      {
+        "id": "replace",
+        "heading": "When should you replace a towel?",
+        "paragraphs": [
+          "A lingering smell does not automatically mean a towel needs replacing. First try an appropriate wash and thorough drying. If it remains badly worn, has damaged fibers, or repeatedly develops an odor despite proper care, replacing it may be more practical.",
+          "For sensitive skin or recurring irritation, choose a suitable laundry product and consider professional medical advice if symptoms persist."
         ]
       }
     ],
-    "sources": []
+    "faq": [
+      {
+        "q": "Why do towels smell fine dry but bad when wet?",
+        "a": "Moisture can make trapped odors more noticeable. Residue and poor drying may contribute; a proper wash, thorough rinse and complete drying often help."
+      },
+      {
+        "q": "Is more detergent the answer to smelly towels?",
+        "a": "Usually not. Too much detergent can be hard to rinse out. Follow the dosage instructions for your machine, load and water conditions."
+      },
+      {
+        "q": "Can I mix vinegar and bleach to clean towels?",
+        "a": "No. Never mix chlorine bleach with vinegar, ammonia or other household cleaning chemicals. Follow the product label."
+      }
+    ],
+    "sources": [
+      {
+        "name": "American Cleaning Institute — Laundry basics",
+        "url": "https://www.cleaninginstitute.org/cleaning-tips/clothes/laundry-basics"
+      },
+      {
+        "name": "CDC — Cleaning and disinfecting safely",
+        "url": "https://www.cdc.gov/hygiene/about/cleaning-and-disinfecting-your-home.html"
+      }
+    ],
+    "related": [
+      "simple-ways-to-reduce-home-electricity-use",
+      "how-to-make-phone-text-larger"
+    ]
   },
   {
     "slug": "simple-ways-to-reduce-home-electricity-use",
-    "title": "Simple Ways to Use Less Electricity at Home",
+    "title": "How to Lower Your Electricity Bill at Home",
+    "seo_title": "How to Lower Your Electricity Bill: 9 Practical Tips",
+    "meta_description": "Explore 9 practical ways to reduce home electricity use, from heating and cooling to LEDs, laundry, standby power, and checking your utility bill.",
     "category": "Money & Savings",
-    "excerpt": "Low-effort habits that may reduce wasted electricity without sacrificing comfort.",
     "publish_at": "2026-10-12T00:00:00Z",
-    "introduction": "You do not need a complete home renovation to pay closer attention to electricity use. Start with the appliances and settings you control every day.",
+    "date_modified": "2026-10-12",
+    "read_time": "7 min read",
+    "excerpt": "Cut wasted electricity with practical steps for thermostats, lighting, laundry, appliances and monthly bill tracking.",
+    "introduction": "A higher electricity bill does not always mean you are using more appliances. Weather, utility rates, household routines and equipment settings can all affect the total. Instead of buying expensive gadgets right away, start by finding out where your home uses energy and changing habits that create waste.",
+    "hero": {
+      "src": "https://images.pexels.com/photos/6964105/pexels-photo-6964105.jpeg?auto=compress&cs=tinysrgb&w=1400",
+      "alt": "Couple looking over household bills and a calculator at a table",
+      "credit": "Mikhail Nilov",
+      "photo_url": "https://www.pexels.com/photo/couple-looking-at-their-bills-6964105/",
+      "caption": "Compare energy use and utility charges before deciding where to save."
+    },
     "sections": [
       {
-        "heading": "Focus on heating and cooling",
+        "id": "bill",
+        "heading": "1. Understand what your electric bill is telling you",
         "paragraphs": [
-          "Heating and cooling frequently represent a large part of household energy consumption. Use reasonable temperature settings, close doors and windows while equipment is running, and maintain filters as the manufacturer recommends.",
-          "If your home has a programmable thermostat, set schedules that match when the house is occupied. Avoid changes that compromise health or safety during extreme weather."
+          "Look for electricity used, normally shown in kilowatt-hours (kWh), not just the total amount due. Your bill may also include fixed charges, taxes, rate changes and seasonal adjustments.",
+          "Compare usage with a similar month last year when possible. A higher price per kWh can increase the bill even if you use the same amount of energy."
+        ],
+        "bullets": [
+          "Find total kWh on the bill.",
+          "Compare usage across similar seasons.",
+          "Check whether the electricity rate or fees changed.",
+          "Identify any new appliances or unusually long heating and cooling periods."
         ]
       },
       {
-        "heading": "Look at lighting and standby power",
+        "id": "thermostat",
+        "heading": "2. Review heating and cooling settings",
         "paragraphs": [
-          "Replace frequently used incandescent bulbs with appropriate LED alternatives when needed. Turn off lights in empty rooms.",
-          "Some devices consume power in standby mode. A power strip may make it easier to turn off eligible equipment, but leave devices that require continuous operation connected."
+          "Heating and air conditioning are often major energy users. Choose safe, comfortable thermostat settings and use schedules that reflect when people are home, asleep or away.",
+          "Close windows while the system runs, check door seals, and change filters following the manufacturer's guidance. During extreme heat or cold, comfort and safety take priority over savings."
+        ],
+        "image": {
+          "src": "https://images.pexels.com/photos/7616651/pexels-photo-7616651.jpeg?auto=compress&cs=tinysrgb&w=1400",
+          "alt": "Digital thermostat mounted on a wall in a home",
+          "credit": "Erik Mclean",
+          "photo_url": "https://www.pexels.com/photo/white-thermostat-hanging-on-the-wall-7616651/",
+          "caption": "A sensible thermostat schedule can help avoid heating or cooling an empty home."
+        }
+      },
+      {
+        "id": "led",
+        "heading": "3. Replace frequently used older bulbs with LEDs",
+        "paragraphs": [
+          "LED bulbs generally use far less electricity than traditional incandescent bulbs. Begin with lamps that stay on for several hours each day, rather than buying replacements for every rarely used fixture at once.",
+          "Check brightness in lumens, fitting type, color temperature and dimmer compatibility before purchasing. An efficient bulb still wastes energy if it stays on unnecessarily."
+        ],
+        "image": {
+          "src": "https://images.pexels.com/photos/7140253/pexels-photo-7140253.jpeg?auto=compress&cs=tinysrgb&w=1400",
+          "alt": "Single LED light bulb on a white surface",
+          "credit": "Julia Filirovska",
+          "photo_url": "https://www.pexels.com/photo/light-bulb-on-white-surface-with-shadow-7140253/",
+          "caption": "Choose LEDs that fit the fixture and provide the brightness you actually need."
+        }
+      },
+      {
+        "id": "standby",
+        "heading": "4. Reduce unnecessary standby power",
+        "paragraphs": [
+          "Some devices draw electricity when idle. Consider switching off devices you rarely use or placing suitable electronics on an easy-to-reach power strip.",
+          "Leave essential equipment running: internet hardware, medical devices, alarms, refrigerators and other equipment that must stay powered should not be shut off simply to save a little electricity."
         ]
       },
       {
-        "heading": "Measure before buying new equipment",
+        "id": "laundry",
+        "heading": "5. Use your washer and dryer efficiently",
         "paragraphs": [
-          "Review your utility bills month by month and account for weather and changes in household use. If possible, use a plug-in power monitor to identify energy-intensive devices.",
-          "A product's advertised savings are not guaranteed for your household. Compare its total cost with realistic usage before purchasing."
+          "Wash appropriately sized loads instead of running many tiny loads, but do not overload the machine. Use cooler water when care labels and cleaning needs allow.",
+          "Clean the dryer lint filter as directed and avoid overdrying. Air drying can help for suitable garments and towels when ventilation and humidity permit. For a related laundry problem, see our guide on why towels may smell after washing."
         ]
+      },
+      {
+        "id": "kitchen",
+        "heading": "6. Check your kitchen appliances",
+        "paragraphs": [
+          "Keep your refrigerator door seals clean and check that doors close fully. Allow air to circulate where the appliance maker specifies, and avoid leaving doors open while deciding what to eat.",
+          "Small cooking choices can matter: heat only the water you need and use suitable cookware. Do not change appliance temperature settings in ways that compromise food safety."
+        ]
+      },
+      {
+        "id": "hot-water",
+        "heading": "7. Reduce unnecessary hot-water use",
+        "paragraphs": [
+          "Shorter showers, fixing a dripping hot-water faucet and using cooler laundry cycles where appropriate may reduce the energy needed to heat water.",
+          "If you adjust a water heater's thermostat, follow the manufacturer's instructions and consider scalding and water-safety risks. A setting appropriate for one home is not automatically safe for every household."
+        ]
+      },
+      {
+        "id": "big-purchases",
+        "heading": "8. Measure before buying energy-saving devices",
+        "paragraphs": [
+          "A new appliance may use less electricity than an old one, but the price matters. Compare estimated yearly energy use, purchase price, warranty, and expected lifespan before buying.",
+          "An inexpensive plug-in electricity monitor can help identify power-hungry devices that plug into an outlet. Do not use one beyond its rated capacity or on hardwired equipment."
+        ]
+      },
+      {
+        "id": "plan",
+        "heading": "9. Try a simple seven-day electricity check",
+        "steps": [
+          "Day 1: Record the current meter or usage reading, if available.",
+          "Day 2: Check thermostat schedules and filters.",
+          "Day 3: List high-use lights and replace worn-out incandescent bulbs with compatible LEDs.",
+          "Day 4: Check standby devices that can safely be switched off.",
+          "Day 5: Review laundry and water-heating habits.",
+          "Day 6: Inspect door and window drafts.",
+          "Day 7: Compare readings or your utility app, then choose two habits to maintain."
+        ],
+        "paragraphs": [
+          "One week is not enough to prove your bill will fall; weather and occupancy vary. Use the checklist to build a baseline and review the next few monthly bills for a clearer picture."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": "What usually uses the most electricity in a house?",
+        "a": "It depends on the home, climate and equipment. Heating, cooling, water heating and large appliances are common places to investigate first."
+      },
+      {
+        "q": "Will unplugging every charger make a big difference?",
+        "a": "Individual modern chargers often use little power when idle. Focus first on the biggest loads, then reduce unnecessary standby use safely."
+      },
+      {
+        "q": "Is it worth switching to LED bulbs?",
+        "a": "Often yes, especially for frequently used fixtures that still have incandescent bulbs. Match the bulb to the fixture and compare total cost."
       }
     ],
     "sources": [
       {
         "name": "U.S. Department of Energy — Energy Saver",
         "url": "https://www.energy.gov/energysaver/energy-saver"
+      },
+      {
+        "name": "U.S. Department of Energy — Five energy-saving tips for renters",
+        "url": "https://www.energy.gov/articles/5-tips-energy-saving-renters"
       }
+    ],
+    "related": [
+      "why-towels-smell-after-washing",
+      "how-to-make-phone-text-larger"
     ]
   }
 ]
