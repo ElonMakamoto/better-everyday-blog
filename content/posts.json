@@ -1,0 +1,111 @@
+[
+  {
+    "slug": "how-to-make-phone-text-larger",
+    "title": "How to Make Text Larger on Your Smartphone",
+    "category": "Simple Technology",
+    "excerpt": "An easy guide to improving readability on iPhone and Android without replacing your phone.",
+    "publish_at": "2026-10-12T00:00:00Z",
+    "introduction": "Small text can make an otherwise useful phone frustrating. You can usually enlarge the words and important interface elements using accessibility settings.",
+    "sections": [
+      {
+        "heading": "Start with display settings",
+        "paragraphs": [
+          "On an iPhone, open Settings and look for Display & Brightness, then Text Size. Move the slider until the words are comfortable to read. Larger Accessibility Sizes are available under Accessibility > Display & Text Size.",
+          "On most Android phones, open Settings and search for Font size or Display size. Menu names can vary between brands and software versions."
+        ]
+      },
+      {
+        "heading": "Make the screen easier to see",
+        "paragraphs": [
+          "If a larger font is not enough, increase display size, adjust contrast or turn on bold text where your phone supports it.",
+          "Test the result inside the apps you use most. Some apps manage their own font size, so not every screen will change equally."
+        ]
+      },
+      {
+        "heading": "Keep one more shortcut handy",
+        "paragraphs": [
+          "Both major phone platforms include magnification features in Accessibility. These can help with tiny text that an app does not let you resize."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "name": "Apple Support — Display and text size",
+        "url": "https://support.apple.com/guide/iphone/adjust-display-and-text-size-iph3e2e1fb0/ios"
+      },
+      {
+        "name": "Android Accessibility Help",
+        "url": "https://support.google.com/accessibility/android/"
+      }
+    ]
+  },
+  {
+    "slug": "why-towels-smell-after-washing",
+    "title": "Why Towels Still Smell After Washing",
+    "category": "Home & Everyday",
+    "excerpt": "Understand common causes of musty towel smells and practical ways to prevent them.",
+    "publish_at": "2026-10-12T00:00:00Z",
+    "introduction": "A freshly washed towel should smell clean. When it still smells damp or musty, the issue is often moisture, washing habits or a washing machine that needs attention.",
+    "sections": [
+      {
+        "heading": "Moisture is often the key",
+        "paragraphs": [
+          "A towel that stays damp for too long can develop an unpleasant smell. Spread towels out to dry completely instead of leaving them in a pile or a closed hamper.",
+          "After washing, move towels to the dryer or drying rack promptly. Make sure they are fully dry before folding and storing."
+        ]
+      },
+      {
+        "heading": "Avoid overloading the washer",
+        "paragraphs": [
+          "A tightly packed load may prevent adequate cleaning and rinsing. Follow your machine's load guidance and use the amount of detergent recommended for the load and water conditions.",
+          "More detergent is not always better. Residue may remain in fabrics if detergent is used excessively or rinsing is insufficient."
+        ]
+      },
+      {
+        "heading": "Check your machine",
+        "paragraphs": [
+          "If several loads smell musty, inspect the washer gasket, detergent drawer and filter according to the manufacturer's manual. Run the recommended cleaning cycle when appropriate.",
+          "Never mix bleach with vinegar, ammonia or other cleaning chemicals."
+        ]
+      }
+    ],
+    "sources": []
+  },
+  {
+    "slug": "simple-ways-to-reduce-home-electricity-use",
+    "title": "Simple Ways to Use Less Electricity at Home",
+    "category": "Money & Savings",
+    "excerpt": "Low-effort habits that may reduce wasted electricity without sacrificing comfort.",
+    "publish_at": "2026-10-12T00:00:00Z",
+    "introduction": "You do not need a complete home renovation to pay closer attention to electricity use. Start with the appliances and settings you control every day.",
+    "sections": [
+      {
+        "heading": "Focus on heating and cooling",
+        "paragraphs": [
+          "Heating and cooling frequently represent a large part of household energy consumption. Use reasonable temperature settings, close doors and windows while equipment is running, and maintain filters as the manufacturer recommends.",
+          "If your home has a programmable thermostat, set schedules that match when the house is occupied. Avoid changes that compromise health or safety during extreme weather."
+        ]
+      },
+      {
+        "heading": "Look at lighting and standby power",
+        "paragraphs": [
+          "Replace frequently used incandescent bulbs with appropriate LED alternatives when needed. Turn off lights in empty rooms.",
+          "Some devices consume power in standby mode. A power strip may make it easier to turn off eligible equipment, but leave devices that require continuous operation connected."
+        ]
+      },
+      {
+        "heading": "Measure before buying new equipment",
+        "paragraphs": [
+          "Review your utility bills month by month and account for weather and changes in household use. If possible, use a plug-in power monitor to identify energy-intensive devices.",
+          "A product's advertised savings are not guaranteed for your household. Compare its total cost with realistic usage before purchasing."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Energy — Energy Saver",
+        "url": "https://www.energy.gov/energysaver/energy-saver"
+      }
+    ]
+  }
+]
