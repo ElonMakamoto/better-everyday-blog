@@ -45,9 +45,9 @@ def photo(img, eager=False, card=False):
            '" width="1200" height="800" loading="'+loading+'" decoding="async"'+priority+'>')
     if card:
         return tag
-    link = '<a href="'+esc(img["photo_url"])+'" target="_blank" rel="noopener noreferrer">'+esc(img["credit"])+' / Pexels</a>'
     if img.get("ai_generated"):
         return '<figure>'+tag+'<figcaption>'+esc(img["caption"])+' · AI-generated illustration</figcaption></figure>'
+    link = '<a href="'+esc(img["photo_url"])+'" target="_blank" rel="noopener noreferrer">'+esc(img["credit"])+' / Pexels</a>'
     return '<figure>'+tag+'<figcaption>'+esc(img["caption"])+' · Photo: '+link+'</figcaption></figure>'
 
 def schemas(data):
@@ -58,7 +58,7 @@ def page(title, description, body, url="/", hero_image=None, schema=None, publis
     nav = "".join('<a href="'+href+'">'+esc(label)+'</a>' for label,href in nav_items)
     link = BASE + url
     description = description[:165]
-    og_image = ('<meta property="og:image" content="'+esc(hero_image["src"])+'"><meta name="twitter:card" content="summary_large_image">' if hero_image else '<meta name="twitter:card" content="summary">')
+    og_image = ('<meta property="og:image" content="'+esc((BASE + hero_image["src"]) if hero_image["src"].startswith("/") else hero_image["src"])+'"><meta name="twitter:card" content="summary_large_image">' if hero_image else '<meta name="twitter:card" content="summary">')
     dates = ('<meta property="article:published_time" content="'+esc(published)+'">' if published else "") + ('<meta property="article:modified_time" content="'+esc(modified)+'">' if modified else "")
     structured = schemas(schema) if schema else ""
     return (
@@ -143,7 +143,7 @@ def article(post):
     parts.append('</article>')
     structured=[
         {"@context":"https://schema.org","@type":"BlogPosting","headline":post["title"],
-         "description":post["meta_description"],"image":[post["hero"]["src"]],
+         "description":post["meta_description"],"image":[(BASE + post["hero"]["src"]) if post["hero"]["src"].startswith("/") else post["hero"]["src"]],
          "datePublished":post["publish_at"],"dateModified":post["date_modified"],
          "mainEntityOfPage":{"@type":"WebPage","@id":BASE+article_url},
          "author":{"@type":"Organization","name":BRAND,"url":BASE+"/about/"},
