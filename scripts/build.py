@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Build the Better Everyday static site from editorially reviewed JSON."""
+import base64
 import datetime as dt
 import html
 import json
@@ -24,6 +25,14 @@ assert len(POSTS) == len(BY_SLUG), "Duplicate slugs detected"
 if OUT.exists():
     shutil.rmtree(OUT)
 OUT.mkdir(parents=True)
+# AI-generated photographs are committed as base64 text and decoded at build time.
+images_dir = OUT / "images"
+images_dir.mkdir(exist_ok=True)
+for asset in sorted((ROOT / "media").glob("*.webp.b64")):
+    decoded = base64.b64decode(asset.read_text(encoding="ascii").strip(), validate=True)
+    if not decoded.startswith(b"RIFF") or decoded[8:12] != b"WEBP":
+        raise ValueError("Invalid WebP image: " + asset.name)
+    (images_dir / asset.name.removesuffix(".b64")).write_bytes(decoded)
 
 def photo(img, eager=False, card=False):
     if not img:
@@ -37,6 +46,8 @@ def photo(img, eager=False, card=False):
     if card:
         return tag
     link = '<a href="'+esc(img["photo_url"])+'" target="_blank" rel="noopener noreferrer">'+esc(img["credit"])+' / Pexels</a>'
+    if img.get("ai_generated"):
+        return '<figure>'+tag+'<figcaption>'+esc(img["caption"])+' · AI-generated illustration</figcaption></figure>'
     return '<figure>'+tag+'<figcaption>'+esc(img["caption"])+' · Photo: '+link+'</figcaption></figure>'
 
 def schemas(data):
