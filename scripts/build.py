@@ -41,8 +41,17 @@ def photo(img, eager=False, card=False):
     loading = "eager" if eager else "lazy"
     priority = ' fetchpriority="high"' if eager else ""
     # Photos are licensed from Pexels. The photographer and original photo are linked in the caption.
-    tag = ('<img class="'+css+'" src="'+esc(img["src"])+'" alt="'+esc(img["alt"])+
-           '" width="1200" height="800" loading="'+loading+'" decoding="async"'+priority+'>')
+    image_url = img["src"]
+    # Adaptive source resolutions prevent tiny cards from downloading the whole hero image.
+    srcset = ""
+    if "images.pexels.com/photos/" in image_url and "&w=" in image_url:
+        base_url = image_url.rsplit("&w=", 1)[0]
+        srcset = (' srcset="'+esc(base_url + '&w=640')+' 640w, '+
+                  esc(base_url + '&w=1200')+' 1200w, '+
+                  esc(base_url + '&w=1800')+' 1800w"')
+    sizes = ' sizes="(max-width: 620px) 100vw, (max-width: 930px) 50vw, 380px"' if card else ' sizes="(max-width: 900px) 100vw, 850px"'
+    tag = ('<img class="'+css+'" src="'+esc(image_url)+'" alt="'+esc(img["alt"])+
+           '" width="1800" height="1200" loading="'+loading+'" decoding="async"'+priority+srcset+sizes+'>')
     if card:
         return tag
     if img.get("ai_generated"):
@@ -167,8 +176,8 @@ site_schema={"@context":"https://schema.org","@type":"WebSite","name":BRAND,"url
 site_schema={"@context":"https://schema.org","@type":"WebSite","name":BRAND,"url":BASE+"/","description":"Plain-English practical guides to money, home and everyday technology."}
 featured = next((p for p in POSTS if p["category"] == "Money & Savings"), POSTS[0] if POSTS else None)
 hero_link = "/articles/"+featured["slug"]+"/" if featured else "#latest"
-intro = ('<section class="home-hero"><img class="home-hero-photo" src="/images/hero-photo.webp" '
-         'alt="Smiling mature woman enjoying a peaceful morning at home" width="465" height="193" '
+intro = ('<section class="home-hero"><img class="home-hero-photo" src="https://images.pexels.com/photos/6874105/pexels-photo-6874105.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=2000" '
+         'alt="Mature woman relaxing with coffee by a bright window at home" width="2000" height="1333" '
          'fetchpriority="high" decoding="async">'
          '<div class="hero-overlay"></div><div class="home-hero-content">'
          '<span class="hero-kicker">PRACTICAL TIPS FOR A BRIGHTER TOMORROW</span>'
@@ -177,10 +186,10 @@ intro = ('<section class="home-hero"><img class="home-hero-photo" src="/images/h
          '<a class="cta" href="'+hero_link+'">Read our featured guide <span aria-hidden="true">→</span></a>'
          '</div></section>')
 cat_images = {
-    "Healthy Living": "/images/hero-photo.webp",
-    "Home & Everyday": next((p["hero"]["src"] for p in POSTS if p["category"]=="Home & Everyday"), "/images/hero-photo.webp"),
-    "Money & Savings": next((p["hero"]["src"] for p in POSTS if p["category"]=="Money & Savings"), "/images/hero-photo.webp"),
-    "Simple Technology": next((p["hero"]["src"] for p in POSTS if p["category"]=="Simple Technology"), "/images/hero-photo.webp")
+    "Healthy Living": "https://images.pexels.com/photos/6874105/pexels-photo-6874105.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "Home & Everyday": next((p["hero"]["src"] for p in POSTS if p["category"]=="Home & Everyday"), "https://images.pexels.com/photos/6874105/pexels-photo-6874105.jpeg?auto=compress&cs=tinysrgb&w=1200"),
+    "Money & Savings": next((p["hero"]["src"] for p in POSTS if p["category"]=="Money & Savings"), "https://images.pexels.com/photos/6874105/pexels-photo-6874105.jpeg?auto=compress&cs=tinysrgb&w=1200"),
+    "Simple Technology": next((p["hero"]["src"] for p in POSTS if p["category"]=="Simple Technology"), "https://images.pexels.com/photos/6874105/pexels-photo-6874105.jpeg?auto=compress&cs=tinysrgb&w=1200")
 }
 cat_detail = {
     "Healthy Living": ("Health", "Feel better, live brighter", "♡", "health"),
