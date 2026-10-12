@@ -64,10 +64,10 @@ def page(title, description, body, url="/", hero_image=None, schema=None, publis
         '<meta property="og:title" content="'+esc(title)+'">'
         '<meta property="og:description" content="'+esc(description)+'">'
         +og_image+dates+structured+
-        '<link rel="stylesheet" href="/style.css"></head><body>'
+        '<script src="/theme-init.js"></script><link rel="stylesheet" href="/style.css"><script src="/theme.js" defer></script></head><body>'
         '<a class="skip-link" href="#main">Skip to content</a>'
         '<header><div class="wrap head"><a class="logo" href="/" aria-label="Better Everyday home">better<span>everyday.</span></a>'
-        '<nav aria-label="Main navigation">'+nav+'</nav></div></header>'
+        '<div class="nav-tools"><nav aria-label="Main navigation">'+nav+'</nav><button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false"><span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">Dark</span></button></div></div></header>'
         '<main id="main" class="wrap">'+body+'</main>'
         '<footer><div class="wrap foot"><div><strong>Better Everyday</strong><p>Useful answers. Less everyday friction.</p></div>'
         '<div class="footer-links"><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/editorial-policy/">Editorial policy</a></div></div>'
@@ -95,7 +95,7 @@ def article(post):
     parts=['<article class="article"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/category/'+cat_slug+'/">'+esc(post["category"])+'</a></nav>',
            '<div class="article-label">'+esc(post["category"])+' <span>·</span> '+esc(post["read_time"])+'</div>',
            '<h1>'+esc(post["title"])+'</h1>',
-           '<div class="byline">By '+BRAND+' · Published <time datetime="'+post["publish_at"][:10]+'">'+esc(post["publish_at"][:10])+'</time> · Updated '+esc(post["date_modified"])+'</div>',
+           '<div class="byline">Guides from '+BRAND+'</div>',
            '<p class="lede">'+esc(post["introduction"])+'</p>', photo(post["hero"], eager=True),
            '<div class="toc"><strong>In this guide</strong><ol>'+''.join('<li><a href="#'+esc(s["id"])+'">'+esc(s["heading"])+'</a></li>' for s in post["sections"])+'</ol></div>']
     for sec in post["sections"]:
@@ -148,13 +148,26 @@ def article(post):
                 published=post["publish_at"],modified=post["date_modified"])
 
 site_schema={"@context":"https://schema.org","@type":"WebSite","name":BRAND,"url":BASE+"/","description":"Plain-English practical guides to money, home and everyday technology."}
-intro=('<section class="hero"><span class="eyebrow">SMARTER LIVING, MADE SIMPLE</span>'
-       '<h1>Small changes.<br><em>Better every day.</em></h1>'
-       '<p>Real-life guides to saving money, caring for your home, and making technology easier — written in plain English.</p>'
-       '<a class="cta" href="#latest">Browse the guides <span aria-hidden="true">→</span></a></section>')
+# A photo-led, editorial homepage. Images link to the matching guides.
+hero_photos = sorted(POSTS, key=lambda p: {"Money & Savings":0, "Home & Everyday":1, "Simple Technology":2}.get(p["category"],9))[:3]
+hero_tiles = ''.join(
+    '<a class="hero-mosaic-tile tile-'+str(i+1)+'" href="/articles/'+esc(p["slug"])+'/" aria-label="'+esc(p["title"])+'">'
+    '<img src="'+esc(p["hero"]["src"])+'" alt="'+esc(p["hero"]["alt"])+'" width="800" height="1000" '
+    'loading="'+("eager" if i == 0 else "lazy")+'" decoding="async">'
+    '<span class="tile-overlay"><small>'+esc(p["category"])+'</small><strong>'+esc(p["title"])+'</strong></span></a>'
+    for i,p in enumerate(hero_photos)
+)
+intro=('<section class="hero hero-editorial"><div class="hero-copy">'
+       '<span class="hero-eyebrow"><span class="eyebrow-line"></span> Practical living journal</span>'
+       '<h1>Life feels better<br>when things <em>make sense.</em></h1>'
+       '<p>Useful answers for your home, money and everyday technology. Clear guidance, beautiful simplicity, and nothing you don’t need.</p>'
+       '<div class="hero-actions"><a class="cta" href="#latest">Explore our articles <span aria-hidden="true">↗</span></a>'
+       '<span class="hero-hint">Simple advice. Real-life value.</span></div></div>'
+       '<div class="hero-mosaic" aria-label="Featured stories">'+hero_tiles+'</div></section>')
 cats='<section class="categories" aria-label="Browse topics">'+''.join('<a href="/category/'+slug+'/">'+esc(name)+' <span>↗</span></a>' for name,slug in CATS.items())+'</section>'
-latest='<section id="latest" class="listing"><div class="section-head"><span class="eyebrow">OUR GUIDES</span><h2>Practical reading, right when you need it</h2></div><div class="cards">'+''.join(map(card, POSTS))+'</div></section>'
-write("/",page("Practical Guides for Everyday Living","Clear, useful guides to saving money, solving household problems, and using your smartphone with confidence.",intro+cats+latest,"/",schema=site_schema))
+latest='<section id="latest" class="listing"><div class="section-head"><div><span class="eyebrow">THE READING ROOM</span><h2>Stories to make everyday easier.</h2></div><p>Explore approachable guides on the topics that matter at home.</p></div><div class="cards">'+''.join(map(card, POSTS))+'</div></section>'
+benefits='<section class="benefits"><div><span class="benefit-mark">✦</span><h3>Practical, not complicated</h3><p>Simple steps you can try in daily life.</p></div><div><span class="benefit-mark">◌</span><h3>Made for real life</h3><p>From easier tech to smarter home habits.</p></div><div><span class="benefit-mark">↗</span><h3>Curiosity is welcome</h3><p>Find answers to those little everyday questions.</p></div></section>'
+write("/",page("Practical Guides for Everyday Living","Clear, useful guides to saving money, solving household problems, and using your smartphone with confidence.",intro+cats+latest+benefits,"/",schema=site_schema))
 for name,slug in CATS.items():
     subset=[p for p in POSTS if p["category"]==name]
     body='<section class="page"><span class="eyebrow">EXPLORE</span><h1>'+esc(name)+'</h1><p class="lede">Useful, easy-to-follow guides about '+esc(name.lower())+'.</p>'
@@ -213,6 +226,6 @@ for url in all_urls:
         ET.SubElement(entry,"{"+ns+"}lastmod").text=p["date_modified"]
 ET.ElementTree(urlset).write(OUT/"sitemap.xml",encoding="utf-8",xml_declaration=True)
 (OUT/"robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: "+BASE+"/sitemap.xml\n",encoding="utf-8")
-for name in ["style.css","favicon.svg"]:
+for name in ["style.css","favicon.svg","theme-init.js","theme.js"]:
     shutil.copyfile(ROOT/"static"/name,OUT/name)
 print("Published",len(POSTS),"articles,",len(all_urls),"URLs,",sum(1+sum(bool(s.get("image")) for s in p["sections"]) for p in POSTS),"photographs")
