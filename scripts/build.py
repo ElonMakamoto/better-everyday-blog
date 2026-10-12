@@ -159,26 +159,53 @@ def article(post):
                 published=post["publish_at"],modified=post["date_modified"])
 
 site_schema={"@context":"https://schema.org","@type":"WebSite","name":BRAND,"url":BASE+"/","description":"Plain-English practical guides to money, home and everyday technology."}
-# A photo-led, editorial homepage. Images link to the matching guides.
-hero_photos = sorted(POSTS, key=lambda p: {"Money & Savings":0, "Home & Everyday":1, "Simple Technology":2}.get(p["category"],9))[:3]
-hero_tiles = ''.join(
-    '<a class="hero-mosaic-tile tile-'+str(i+1)+'" href="/articles/'+esc(p["slug"])+'/" aria-label="'+esc(p["title"])+'">'
-    '<img src="'+esc(p["hero"]["src"])+'" alt="'+esc(p["hero"]["alt"])+'" width="800" height="1000" '
-    'loading="'+("eager" if i == 0 else "lazy")+'" decoding="async">'
-    '<span class="tile-overlay"><small>'+esc(p["category"])+'</small><strong>'+esc(p["title"])+'</strong></span></a>'
-    for i,p in enumerate(hero_photos)
-)
-intro=('<section class="hero hero-editorial"><div class="hero-copy">'
-       '<span class="hero-eyebrow"><span class="eyebrow-line"></span> Practical living journal</span>'
-       '<h1>Life feels better<br>when things <em>make sense.</em></h1>'
-       '<p>Useful answers for your home, money and everyday technology. Clear guidance, beautiful simplicity, and nothing you don’t need.</p>'
-       '<div class="hero-actions"><a class="cta" href="#latest">Explore our articles <span aria-hidden="true">↗</span></a>'
-       '<span class="hero-hint">Simple advice. Real-life value.</span></div></div>'
-       '<div class="hero-mosaic" aria-label="Featured stories">'+hero_tiles+'</div></section>')
-cats='<section class="categories" aria-label="Browse topics">'+''.join('<a href="/category/'+slug+'/">'+esc(name)+' <span>↗</span></a>' for name,slug in CATS.items())+'</section>'
-latest='<section id="latest" class="listing"><div class="section-head"><div><span class="eyebrow">THE READING ROOM</span><h2>Stories to make everyday easier.</h2></div><p>Explore approachable guides on the topics that matter at home.</p></div><div class="cards">'+''.join(map(card, POSTS))+'</div></section>'
-benefits='<section class="benefits"><div><span class="benefit-mark">✦</span><h3>Practical, not complicated</h3><p>Simple steps you can try in daily life.</p></div><div><span class="benefit-mark">◌</span><h3>Made for real life</h3><p>From easier tech to smarter home habits.</p></div><div><span class="benefit-mark">↗</span><h3>Curiosity is welcome</h3><p>Find answers to those little everyday questions.</p></div></section>'
-write("/",page("Practical Guides for Everyday Living","Clear, useful guides to saving money, solving household problems, and using your smartphone with confidence.",intro+cats+latest+benefits,"/",schema=site_schema))
+# A friendly editorial homepage with an original AI-generated photograph.
+site_schema={"@context":"https://schema.org","@type":"WebSite","name":BRAND,"url":BASE+"/","description":"Plain-English practical guides to money, home and everyday technology."}
+featured = next((p for p in POSTS if p["category"] == "Money & Savings"), POSTS[0] if POSTS else None)
+hero_link = "/articles/"+featured["slug"]+"/" if featured else "#latest"
+intro = ('<section class="home-hero"><img class="home-hero-photo" src="/images/hero-photo.webp" '
+         'alt="Smiling mature woman enjoying a peaceful morning at home" width="465" height="193" '
+         'fetchpriority="high" decoding="async">'
+         '<div class="hero-overlay"></div><div class="home-hero-content">'
+         '<span class="hero-kicker">PRACTICAL TIPS FOR A BRIGHTER TOMORROW</span>'
+         '<h1>Better choices<br>for a <em>brighter you.</em></h1>'
+         '<p>Simple, useful advice on home, money, technology and everyday living, all in one welcoming place.</p>'
+         '<a class="cta" href="'+hero_link+'">Read our featured guide <span aria-hidden="true">→</span></a>'
+         '</div></section>')
+cat_images = {
+    "Healthy Living": "/images/hero-photo.webp",
+    "Home & Everyday": next((p["hero"]["src"] for p in POSTS if p["category"]=="Home & Everyday"), "/images/hero-photo.webp"),
+    "Money & Savings": next((p["hero"]["src"] for p in POSTS if p["category"]=="Money & Savings"), "/images/hero-photo.webp"),
+    "Simple Technology": next((p["hero"]["src"] for p in POSTS if p["category"]=="Simple Technology"), "/images/hero-photo.webp")
+}
+cat_detail = {
+    "Healthy Living": ("Health", "Feel better, live brighter", "♡", "health"),
+    "Home & Everyday": ("Home", "A cleaner, cozier home", "⌂", "home"),
+    "Money & Savings": ("Money", "Practical ways to save", "$", "money"),
+    "Simple Technology": ("Technology", "Make tech work for you", "⌘", "technology")
+}
+cats = '<section class="categories photo-categories" aria-label="Browse article categories">'+''.join(
+    '<a class="photo-category '+icon+'-tile" href="/category/'+slug+'/">'
+    '<img src="'+esc(cat_images[name])+'" alt="" loading="lazy" decoding="async">'
+    '<span class="category-label"><span class="category-icon">'+esc(symbol)+'</span>'
+    '<span><strong>'+esc(label)+'</strong><small>'+esc(desc)+'</small></span></span></a>'
+    for name,slug in CATS.items()
+    for label,desc,symbol,icon in [cat_detail[name]]
+)+'</section>'
+latest = ('<section id="latest" class="listing"><div class="section-head"><div>'
+          '<span class="eyebrow">OUR BEST READS</span><h2>Latest Articles</h2></div>'
+          '<a class="outline-link" href="#latest">Browse all articles <span aria-hidden="true">→</span></a>'
+          '</div><p id="search-status" class="search-status" hidden></p>'
+          '<div class="cards">'+''.join(map(card, POSTS))+'</div></section>')
+benefits = ('<section class="benefits"><div><span class="benefit-mark">✦</span><h3>Simple, useful guides</h3>'
+            '<p>Clear steps that make everyday decisions easier.</p></div>'
+            '<div><span class="benefit-mark">◌</span><h3>Thoughtfully researched</h3>'
+            '<p>Practical information with links to relevant sources.</p></div>'
+            '<div><span class="benefit-mark">↗</span><h3>Come back anytime</h3>'
+            '<p>Answers to everyday questions in one convenient place.</p></div></section>')
+write("/",page("Practical Guides for Everyday Living",
+               "Friendly advice on simple technology, home care and money-saving habits.",
+               intro+cats+latest+benefits,"/",schema=site_schema))
 for name,slug in CATS.items():
     subset=[p for p in POSTS if p["category"]==name]
     body='<section class="page"><span class="eyebrow">EXPLORE</span><h1>'+esc(name)+'</h1><p class="lede">Useful, easy-to-follow guides about '+esc(name.lower())+'.</p>'
@@ -237,6 +264,6 @@ for url in all_urls:
         ET.SubElement(entry,"{"+ns+"}lastmod").text=p["date_modified"]
 ET.ElementTree(urlset).write(OUT/"sitemap.xml",encoding="utf-8",xml_declaration=True)
 (OUT/"robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: "+BASE+"/sitemap.xml\n",encoding="utf-8")
-for name in ["style.css","favicon.svg","theme-init.js","theme.js"]:
+for name in ["style.css","favicon.svg","theme-init.js","theme.js","search.js"]:
     shutil.copyfile(ROOT/"static"/name,OUT/name)
 print("Published",len(POSTS),"articles,",len(all_urls),"URLs,",sum(1+sum(bool(s.get("image")) for s in p["sections"]) for p in POSTS),"photographs")
