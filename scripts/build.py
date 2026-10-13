@@ -172,24 +172,25 @@ def article(post):
                 published=post["publish_at"],modified=post["date_modified"])
 
 site_schema={"@context":"https://schema.org","@type":"WebSite","name":BRAND,"url":BASE+"/","description":"Plain-English practical guides to money, home and everyday technology."}
-# A friendly editorial homepage with an original AI-generated photograph.
+# A warm editorial homepage with licensed Pexels photography.
 site_schema={"@context":"https://schema.org","@type":"WebSite","name":BRAND,"url":BASE+"/","description":"Plain-English practical guides to money, home and everyday technology."}
 featured = next((p for p in POSTS if p["category"] == "Money & Savings"), POSTS[0] if POSTS else None)
 hero_link = "/articles/"+featured["slug"]+"/" if featured else "#latest"
-intro = ('<section class="home-hero"><img class="home-hero-photo" src="https://images.pexels.com/photos/6874105/pexels-photo-6874105.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=2000" '
-         'alt="Mature woman relaxing with coffee by a bright window at home" width="2000" height="1333" '
+intro = ('<section class="home-hero"><img class="home-hero-photo" src="https://images.pexels.com/photos/8770143/pexels-photo-8770143.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=2000" '
+         'alt="Older couple laughing together on a sofa" style="object-position:center 25%" width="2000" height="1333" '
          'fetchpriority="high" decoding="async">'
          '<div class="hero-overlay"></div><div class="home-hero-content">'
          '<span class="hero-kicker">PRACTICAL TIPS FOR A BRIGHTER TOMORROW</span>'
          '<h1>Better choices<br>for a <em>brighter you.</em></h1>'
          '<p>Simple, useful advice on home, money, technology and everyday living, all in one welcoming place.</p>'
          '<a class="cta" href="'+hero_link+'">Read our featured guide <span aria-hidden="true">→</span></a>'
-         '</div></section>')
+         '</div><a href="https://www.pexels.com/photo/happy-elderly-couple-8770143/" target="_blank" rel="noopener noreferrer" '
+         'style="position:absolute;right:12px;bottom:10px;padding:3px 8px;border-radius:5px;background:rgba(0,0,0,.55);color:#fff;font:10px/1.5 Arial,sans-serif;text-decoration:none">Photo: Gustavo Fring / Pexels</a></section>')
 cat_images = {
-    "Healthy Living": "https://images.pexels.com/photos/6874105/pexels-photo-6874105.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "Home & Everyday": next((p["hero"]["src"] for p in POSTS if p["category"]=="Home & Everyday"), "https://images.pexels.com/photos/6874105/pexels-photo-6874105.jpeg?auto=compress&cs=tinysrgb&w=1200"),
-    "Money & Savings": next((p["hero"]["src"] for p in POSTS if p["category"]=="Money & Savings"), "https://images.pexels.com/photos/6874105/pexels-photo-6874105.jpeg?auto=compress&cs=tinysrgb&w=1200"),
-    "Simple Technology": next((p["hero"]["src"] for p in POSTS if p["category"]=="Simple Technology"), "https://images.pexels.com/photos/6874105/pexels-photo-6874105.jpeg?auto=compress&cs=tinysrgb&w=1200")
+    "Healthy Living": "https://images.pexels.com/photos/8770143/pexels-photo-8770143.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "Home & Everyday": next((p["hero"]["src"] for p in POSTS if p["category"]=="Home & Everyday"), "https://images.pexels.com/photos/8770143/pexels-photo-8770143.jpeg?auto=compress&cs=tinysrgb&w=1200"),
+    "Money & Savings": next((p["hero"]["src"] for p in POSTS if p["category"]=="Money & Savings"), "https://images.pexels.com/photos/8770143/pexels-photo-8770143.jpeg?auto=compress&cs=tinysrgb&w=1200"),
+    "Simple Technology": next((p["hero"]["src"] for p in POSTS if p["category"]=="Simple Technology"), "https://images.pexels.com/photos/8770143/pexels-photo-8770143.jpeg?auto=compress&cs=tinysrgb&w=1200")
 }
 cat_detail = {
     "Healthy Living": ("Health", "Feel better, live brighter", "♡", "health"),
